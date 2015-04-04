@@ -3,31 +3,186 @@
 @import "bower_components/neat/app/assets/stylesheets/_neat.scss";
 // endbower
 
+
+$visual-grid: true !global;
+$accent-color: #FE1D00;
+$footer-color: #2D3033;
+
+html {font-size: 1em;}
+
 body {
-  background: #fafafa;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.45;
   color: #333;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
 }
+
+h1 {
+  margin-top: 0;
+  font-size: 3.998em;
+}
+
+h2 {font-size: 2.827em;}
+
+h3 {font-size: 1.75em;}
+
+h4 {font-size: 1.414em;}
+
+small, .font_small {font-size: 0.707em;}
+
 
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
+}
+
+.rg-6{
+  @include span-columns(6);
+}
+.circle{
+  @include size(125px);
+  border-radius:100%;
+  overflow: hidden;
+}
+.center{
+  margin: 0 auto;
+}
+.adjust-h{
+  width:100%;
+  height:auto;
+}
+.adjust-v{
+  height:100%;
+  width:auto;
+}
+
+.absolute{
+  position:absolute;
+}
+
+.flex-centered{
+  @include align-items(center);
+  @include display(flex);
+  @include justify-content(flex-center);
+  height:99vh;
+  .flex-item{
+     @include flex(1);
+  }
+}
+#language{
+  top:10px;
+  right:15px;
+}
+
+.btn{
+  padding: 5px;
+  border-radius: 1px;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid;
+  font-weight:600;
+  &.btn-default{
+    background-color:white;
+    border-color:black;
+  }
+  &.btn-inverse{
+    background-color:black;
+    border-color:white;
+  }
+}
+a{
+  color:$accent-color;
+}
+@include selection {
+  background-color: lighten($accent-color, 10%);
+}
+.pull-left{
+  float:left;
+}
+.pull-right{
+  float:right;
+}
+.text-center{
+  text-align:center;
+}
+
+.accent-text{
+  color:$accent-color;
+}
+.semi-bold{
+  font-weight:600;
+}
+
+.row{
+  @include row();
+  @include fill-parent;
+}
+
+section{
+  position:relative;
+  z-index:10;
+  min-height:100vh;
+  background-color:#FAFAFA;
+  @include fill-parent;
+  @include outer-container(100%);
+  @include row();
+  @include padding(2vh 15vw 10vh 15vw);
+}
+
+#intro{
+  background-color:black;
+  color:white;
+  @include pad(0);  
+  .background{
+    position:absolute;
+    z-index:0;
+    min-height: 98vh;
+    @include fill-parent;
+    background-image: url("../images/tie.jpeg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+    @include filter(blur(5px));
+  }
+  .foreground{
+    position:absolute;
+    z-index:10;
+    min-height: 100vh;
+    @include fill-parent;
+    background-color:rgba(0,0,0, 0.5);    
+    h1, h2, h3, h4 {
+      margin: 0.25em 0 0.25em;
+      font-weight: inherit;
+      line-height: 1;
+    }
+    .circle{
+      margin-bottom:1vh;
+    }
+  }
+}
+
+.last{
+  box-shadow: 0px 10px 5px darken($footer-color, 5%);
+}
+
+#footer{
+  min-height: 150px;
+  background-color:$footer-color;
+  color:white;
+  z-index:0;
+  @include padding(2vh 10vw 2vh 10vw);
+  .content{
+    bottom: 0px;
+    position:fixed;
+  }
 }
