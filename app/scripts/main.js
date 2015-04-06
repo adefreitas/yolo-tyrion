@@ -1,2 +1,3 @@
 /* jshint devel:true */
-console.log('\'Allo \'Allo!');
+riot.mount('body');
+var spanish = false;

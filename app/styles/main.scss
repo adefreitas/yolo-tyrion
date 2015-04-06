@@ -8,7 +8,15 @@ $visual-grid: true !global;
 $accent-color: #FE1D00;
 $footer-color: #2D3033;
 
-html {font-size: 1em;}
+$mobile: new-breakpoint(max-width 768px);
+
+
+html {
+  font-size: 1em;
+  @include media($mobile) {
+    font-size: 0.75em;
+  }
+}
 
 body {
   background-color: white;
@@ -49,6 +57,11 @@ small, .font_small {font-size: 0.707em;}
 
 .rg-6{
   @include span-columns(6);
+}
+.sm-12 {
+  @include media($mobile) {
+    @include fill-parent;
+  }
 }
 .circle{
   @include size(125px);
