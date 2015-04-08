@@ -7,7 +7,7 @@
 $visual-grid: true !global;
 $accent-color: #FE1D00;
 $footer-color: #2D3033;
-
+$border-radius: 2px;
 $mobile: new-breakpoint(max-width 768px);
 
 
@@ -93,28 +93,30 @@ small, .font_small {font-size: 0.707em;}
      @include flex(1);
   }
 }
-#language{
-  top:10px;
-  right:15px;
-}
 
 .btn{
   padding: 5px;
-  border-radius: 1px;
+  border-radius: $border-radius;
   padding: 5px 10px 5px 10px;
   border: 1px solid;
   font-weight:600;
+  font-weight: regular;
   &.btn-default{
     background-color:white;
     border-color:black;
+    color: black;
   }
   &.btn-inverse{
     background-color:black;
     border-color:white;
+    color: white;
   }
 }
 a{
   color:$accent-color;
+  .white-link{
+    color:white;
+  }
 }
 @include selection {
   background-color: lighten($accent-color, 10%);
@@ -164,7 +166,7 @@ section{
     background-image: url("../images/tie.jpeg");
     background-repeat: no-repeat;
     background-size:cover;
-    background-position: center center;
+    background-attachment: fixed;
     @include filter(blur(5px));
   }
   .foreground{
@@ -198,4 +200,17 @@ section{
     bottom: 0px;
     position:fixed;
   }
+}
+
+#language-container{
+  top: 0px;
+  right: 15px;
+  position:fixed;
+  background-color: #000;
+  z-index:100;
+  height: 50px;
+  width: 150px;
+  border-bottom-right-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
+  text-align: center;
 }
