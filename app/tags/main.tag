@@ -5,6 +5,93 @@
 	      <p if={!spanish}> Change language </p>
 	    </a>
     </div>
+    <div class="sidebar">
+    	<div class="flex-centered">
+          	<div class="flex-item">
+	    		<ul class="body" id="top-menu">
+		    		<li>
+		    			<a href="#intro">
+			    			<div class="patch-because-reasons">
+								^
+							</div>
+							<div class="lower">
+								^	
+							</div>
+							<div class="upper">
+								^	
+							</div>
+	    				</a>
+	    			</li>
+		    		<li><a href="#education">
+		    			<div class="patch-because-reasons">
+							Educacion
+						</div>
+						<div class="lower">
+							Educacion
+						</div>
+						<div class="upper">
+							Educacion	
+						</div>
+	    			</a></li>
+		    		<li><a href="#jobxp">
+		    			<div class="patch-because-reasons">
+							Experiencia
+						</div>
+						<div class="lower">
+							Experiencia
+						</div>
+						<div class="upper">
+							Experiencia
+						</div>
+		    		</a></li>
+		    		<li><a href="#skills">
+						<div class="patch-because-reasons">
+							Destrezas
+						</div>
+						<div class="lower">
+							Destrezas
+						</div>
+						<div class="upper">
+							Destrezas
+						</div>
+		    		</a></li>
+		    		<li><a href="#interests">
+		    			<div class="patch-because-reasons">
+							Intereses
+						</div>
+						<div class="lower">
+							Intereses
+						</div>
+						<div class="upper">
+							Intereses
+						</div>
+		    		</a></li>
+		    		<li><a href="#contact">
+		    			<div class="patch-because-reasons">
+							Contacto
+						</div>
+						<div class="lower">
+							Contacto
+						</div>
+						<div class="upper">
+							Contacto
+						</div>
+		    		</a></li>
+		    		<li><a href="#about">
+		    			<div class="patch-because-reasons">
+							About
+						</div>
+						<div class="lower">
+							About
+						</div>
+						<div class="upper">
+							About
+						</div>
+		    		</a></li>
+		    	</ul>
+	    	</div>
+    	</div>
+    </div>
 	<section id="intro">
       <div class="background">
       </div>
@@ -21,7 +108,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section id="education">
       <h2 if={spanish} class="text-center">Experiencia</h2>
       <h2 if={!spanish} class="text-center">Experience</h2>
       <hr>
@@ -103,7 +190,7 @@
           <h4 class="semi-bold"> High School (Science)</h4>
         </div>
       </div>
-      <hr>
+      <hr id="jobxp">
       <h3 class="accent-text" if={spanish}>Laboral</h3>
       <h3 class="accent-text" if={!spanish}>Work Experience</h3>
       <div class="row" if={spanish}>
@@ -139,7 +226,7 @@
         </div>
       </div>
     </section>
-    <section class="last" if={spanish}>
+    <section id="skills" class="last" if={spanish}>
       <h2 class="text-center">Destrezas</h2>
       <hr>
       <div class="row">
