@@ -9,6 +9,7 @@
     "neat": "~1.7.2",
     "normalize.css": "~3.0.3",
     "open-sans": "~1.1.0",
-    "riotjs": "~2.0.13"
+    "riotjs": "~2.0.13",
+    "animate.css": "~3.2.6"
   }
 }

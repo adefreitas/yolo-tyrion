@@ -1,5 +1,7 @@
 
 riot.mount('main');
+
+
 $(window).load(function(){
 	var lastId,
 	    topMenu = $("#top-menu"),
@@ -46,3 +48,16 @@ $(window).load(function(){
 	   }                   
 	});
 });
+
+
+ wow = new WOW(
+    {
+      boxClass:     'wow',      // default
+      animateClass: 'animated', // default
+      offset:       10,          // default
+      mobile:       true,       // default
+      live:         true        // default
+    }
+);
+
+wow.init();
