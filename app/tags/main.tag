@@ -10,14 +10,11 @@
 			<div class="flex-item">
 				<ul class="body" id="top-menu">
 					<li>
-						<a href="#intro">
+						<a href="#intro" id="first-item">
 							<div class="patch-because-reasons">
 								^
 							</div>
 							<div class="lower">
-								^	
-							</div>
-							<div class="upper">
 								^	
 							</div>
 						</a>
@@ -117,12 +114,12 @@
 			<h3 class="accent-text"  if={!spanish}>Education</h3>
 			<div class="row">
 				<div class="rg-6 sm-12">
-					<h4 class="semi-bold">Universidad Central de Venezuela</h4>
+					<h4 >Universidad Central de Venezuela</h4>
 					<p if={spanish}>Septiembre 2009 - Presente</p>
 					<p if={!spanish}>September 2009 - Present</p>
 				</div>
 				<div class="rg-6 sm-12" if={spanish}>
-					<h4 class="semi-bold">Licenciatura - Ciencias de la Computación</h4>
+					<h4 >Licenciatura - Ciencias de la Computación</h4>
 					<div class="row">
 						<p> Materias electivas cursadas</p>
 						<ul>
@@ -148,7 +145,7 @@
 					</div>
 				</div>
 				<div class="rg-6 sm-12" if={!spanish}>
-					<h4 class="semi-bold">Bachelors Degree in Computer Science</h4>
+					<h4 >Bachelors Degree in Computer Science</h4>
 					<div class="row">
 						<p> Elective classes taken</p>
 						<ul>
@@ -176,20 +173,20 @@
 		</div>
 		<div class="row" if={spanish} class="wow fadeInUp" data-wow-duration="2s">
 			<div class="rg-6 sm-12">
-				<h4 class="semi-bold">U.E.C. María Teresa del Toro</h4>
+				<h4 >U.E.C. María Teresa del Toro</h4>
 				<p>Septiembre 2004 - Julio 2009</p>
 			</div>
 			<div class="rg-6 sm-12">
-				<h4 class="semi-bold">Bachiller en Ciencias</h4>
+				<h4 >Bachiller en Ciencias</h4>
 			</div>
 		</div>
 		<div class="row" if={!spanish} class="wow fadeInUp" data-wow-duration="2s">
 			<div class="rg-6 sm-12">
-				<h4 class="semi-bold">U.E.C. María Teresa del Toro</h4>
+				<h4 >U.E.C. María Teresa del Toro</h4>
 				<p>September 2004 - July 2009</p>
 			</div>
 			<div class="rg-6 sm-12">
-				<h4 class="semi-bold"> High School (Science)</h4>
+				<h4 > High School (Science)</h4>
 			</div>
 		</div>
 		<hr id="jobxp">
@@ -198,11 +195,11 @@
 			<h3 class="accent-text" if={!spanish}>Work Experience</h3>
 			<div class="row" if={spanish}>
 				<div class="rg-6  sm-12">
-					<h4 class="semi-bold">4Geeks Developers Community</h4>
+					<h4 >4Geeks Developers Community</h4>
 					<p>Febrero del 2014 - Presente</p>
 				</div>
 				<div class="rg-6  sm-12">
-					<h4 class="semi-bold">Desarrollador Web</h4>
+					<h4 >Desarrollador Web</h4>
 					<p>Participacion en el desarrollo de proyectos web, haciendo uso de JavaScript, HTML5, CSS3, MongoDB, y utilizando Node.js, AngularJS, ExpressJS, Mongoose, Sass, Grunt, Bower, Git, entre otros frameworks y herramientas.</p>
 					<p> Proyectos: </p>
 					<ul>
@@ -214,11 +211,11 @@
 			</div>
 			<div class="row" if={!spanish}>
 			<div class="rg-6  sm-12">
-				<h4 class="semi-bold">4Geeks Developers Community</h4>
+				<h4 >4Geeks Developers Community</h4>
 				<p>February 2014 - Current</p>
 			</div>
 			<div class="rg-6  sm-12">
-				<h4 class="semi-bold">Web Developer</h4>
+				<h4 >Web Developer</h4>
 				<p>Development of web based projects, making use of JavaScript, HTML5, CSS3, MongoDB, using Node.js, AngularJS, Mongoose, Sass, Grunt, Bower, Git, among other frameworks and tools:</p>
 				<p> Projects: </p>
 				<ul>
@@ -235,9 +232,26 @@
 		<hr>
 		<div class="row">
 			<div class="rg-6  sm-12">
+				<ul>
+					<li>AngularJS <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></li>
+					<li>Express.js<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></li>
+					<li>JavaScript<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></li>
+					<li>HTML5<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></li>
+					<li>Bootstrap<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></li>
+					<li>CSS3<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></li>
+					<li>Sass<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></li>
+					<li>MongoDB<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></li>
+					<li>Git<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></li>
+					<li>Node.js<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></li>
+					<li>Laravel<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></li>
+					<li>Photoshop<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></li>
+					<li>Illustrator<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></li>
+				<ul>
 			</div>
 			<div class="rg-6  sm-12">
-
+				<ul>
+					<li each={skillsRight}> {name} {skillAmount(lvl)}</li>
+				<ul>
 			</div>
 		</div>
 	</section>
@@ -263,6 +277,6 @@
 		changeLanguage(){
 			this.spanish = !this.spanish;
 			console.log(this.spanish);
-		}
+		};<li></
 	</script>
 </main>

@@ -20,7 +20,7 @@ html {
 
 body {
   background-color: white;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 300;
   line-height: 1.45;
   color: #333;
@@ -30,8 +30,10 @@ p {margin-bottom: 1.3em;}
 
 h1, h2, h3, h4 {
   margin: 1.414em 0 0.5em;
-  font-weight: inherit;
+  
   line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
 h1 {
@@ -43,7 +45,10 @@ h2 {font-size: 2.827em;}
 
 h3 {font-size: 1.75em;}
 
-h4 {font-size: 1.414em;}
+h4 {
+  font-size: 1.414em;
+  text-transform: none;
+}
 
 small, .font_small {font-size: 0.707em;}
 
@@ -114,7 +119,7 @@ small, .font_small {font-size: 0.707em;}
 }
 a{
   color:$accent-color;
-  .white-link{
+  &.white-link{
     color:white;
   }
 }
@@ -219,6 +224,9 @@ section{
   position:fixed;
   z-index:100;
   left: 0vw;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 14px;
   .body{
     background:black;
     list-style: none;
@@ -239,6 +247,7 @@ section{
         .lower{
           width:100%;
           top:0px;
+          color:white;
         }
         .upper{
           top: 0px;
@@ -254,10 +263,20 @@ section{
           padding: 10px 30px 10px 30px;
         }
       }
+      #first-item{
+        background: skyblue;
+        color:black;
+      }
     }
     li:hover, li.active{
       .upper{
         width:120%;
+      }
+      .lower{
+        width:80%;
+      }
+      #first-item .lower{
+        width:100%;
       }
     }
     
