@@ -5,11 +5,14 @@
 
 
 $visual-grid: true !global;
-$accent-color: gray;
-$footer-color: #2D3033;
+//$accent-color: #1a80b6;
+$accent-color: #F44336;
 $border-radius: 2px;
 $mobile: new-breakpoint(max-width 768px);
-
+$section-background-color: #2d2d2d;
+$section-text-color: #FFF;
+$footer-color: darken($section-background-color, 10%);
+$body-background: darken($section-background-color, 5%);
 
 html {
   font-size: 1em;
@@ -19,21 +22,24 @@ html {
 }
 
 body {
-  background-color: white;
+  background-color: $body-background;
   font-family: 'Lato', sans-serif;
-  font-weight: 300;
+  font-weight: 100;
   line-height: 1.45;
   color: #333;
 }
 
-p {margin-bottom: 1.3em;}
+p {
+  margin-bottom: 1.3em;
+  font-weight: 400;
+}
 
 h1, h2, h3, h4 {
   margin: 1.414em 0 0.5em;
   
   line-height: 1.2;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 300;
 }
 
 h1 {
@@ -138,6 +144,7 @@ a{
 
 .accent-text{
   color:$accent-color;
+  font-weight: 400;
 }
 .semi-bold{
   font-weight:600;
@@ -152,11 +159,42 @@ section{
   position:relative;
   z-index:10;
   min-height:100vh;
-  background-color: white;
+  color: $section-text-color;
+  background-color:darken($section-background-color, 5%);
   @include fill-parent;
   @include outer-container(100%);
   @include row();
-  @include padding(2vh 15vw 10vh 15vw);
+  h1{
+    color: white;
+    font-weight:100;
+  }
+  hr{
+    border-color:transparent;
+  }
+  .section-content{
+    @include padding(15vh 15vw 10vh 15vw);
+    background-color: $section-background-color;
+    width:80%;
+    margin-left:10%;
+    padding-left:5%;
+    padding-right:5%;
+    overflow:hidden;
+  }
+  &#jobxp{
+    padding-top: 5vh;
+  }
+  &#skills{
+    li{
+      list-style:none;
+      padding-right:12vw;
+    }
+    .star-container{
+      float:right;
+    }
+  }
+  &.last{
+    padding-bottom: 5vh;
+  }
 }
 
 #intro{
@@ -168,7 +206,7 @@ section{
     z-index:0;
     min-height: 100vh;
     @include fill-parent;
-    // background-image: url("../images/tie.jpeg");
+    background-image: url("../images/tie.jpeg");
     background-color:gray;
     background-repeat: no-repeat;
     background-size:cover;
@@ -185,6 +223,10 @@ section{
       margin: 0.25em 0 0.25em;
       font-weight: inherit;
       line-height: 1;
+      text-transform: none;
+    }
+    h4{
+      font-weight: 300;
     }
     .circle{
       margin-bottom:1vh;
@@ -192,19 +234,18 @@ section{
   }
 }
 
-.last{
-  box-shadow: 0px 10px 5px darken($footer-color, 5%);
-}
 
 #footer{
   min-height: 150px;
   background-color:$footer-color;
   color:white;
   z-index:0;
-  @include padding(2vh 10vw 2vh 10vw);
   .content{
+    width:100%;
+    @include padding(2vh 5vw 2vh 5vw);
     bottom: 0px;
     position:fixed;
+
   }
 }
 
@@ -220,19 +261,32 @@ section{
   border-bottom-left-radius: $border-radius;
   text-align: center;
 }
-.sidebar{
+.navbar{
   position:fixed;
   z-index:100;
+  width:100%;
   left: 0vw;
   font-weight: 400;
   text-transform: uppercase;
   font-size: 14px;
   .body{
-    background:black;
+    background:$footer-color;
     list-style: none;
     margin:0px;
     padding:0px;
+    text-align: center;
     li{
+      display:inline-block;
+      p:nth-child(1){
+        margin-top:20px;
+        margin-bottom:0px;
+      }
+      p:nth-child(2){
+        display:none;
+      }
+      .fa{
+        padding-left:8px;
+      }
       a{
         display:block;
         position:relative;
@@ -242,7 +296,6 @@ section{
           min-height:100%;
           position: absolute;
           text-align: center;
-          padding-top:10px;
         }
         .lower{
           width:100%;
@@ -251,12 +304,12 @@ section{
         }
         .upper{
           top: 0px;
-          background: gray;
-          height: 100%;
-          min-width:0px;
-          width:0px;
+          background: $accent-color;
+          width:100%;
+          height: 0%;
+          min-height:0%;
           overflow:hidden;
-          color:black;
+          color:white;
         }
         .patch-because-reasons{
           opacity:0;
@@ -264,21 +317,30 @@ section{
         }
       }
       #first-item{
-        background: skyblue;
+        background: darken($accent-color, 10%);
         color:black;
       }
     }
     li:hover, li.active{
       .upper{
-        width:120%;
+        height:120%;
       }
       .lower{
-        width:80%;
+        height:80%;
       }
       #first-item .lower{
-        width:100%;
+        height:100%;
       }
     }
     
   }
+}
+
+.fa{
+  color: $accent-color;
+}
+#license{
+  margin: 0 auto;
+  width: 80px;
+  display: block;
 }
