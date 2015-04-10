@@ -126,7 +126,7 @@
 					</div>
 					<h1> Andr&eacute;s De Freitas </h1>
 					<h4 if={spanish}> Desarrollador Web</h4>
-					<h4 if={!spanish}> Frontend Web Developer </h4>
+					<h4 if={!spanish}> Web Developer </h4>
 				</div>
 			</div>
 		</div>
