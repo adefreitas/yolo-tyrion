@@ -293,19 +293,6 @@
 			</div>
 		</div>
 	</section>
-	<section class="last wow fadeInUp" if={!spanish}>
-		<div class="section-content">
-			<h2 class="text-center">Skills</h2>
-			<hr>
-			<div class="row">
-				<div class="rg-6  sm-12">
-				</div>
-				<div class="rg-6  sm-12">
-
-				</div>
-			</div>
-		</div>
-	</section>
 	<section id="footer">
 		<div class="content">
 			<p class="text-center accent-text">This <a href="http://neat.bourbon.io/">Neat</a>-<a href="http://bourbon.io/">Bourbon</a>-fueled <a href="">Riot.js</a> was made with some help from <a href="http://gulpjs.com/">Gulp</a> and <a href="http://sass-lang.com/">Sass</a> <i class="fa fa-heart"></i></p>
