@@ -17,20 +17,6 @@
 					<p if={!spanish}>Home</p>
 				</div>
 			</a></li>
-			<li><a href="#education">
-				<div class="patch-because-reasons">
-					<p if={spanish}>Educacion</p>
-					<p if={!spanish}>Education</p>
-				</div>
-				<div class="lower">
-					<p if={spanish}>Educacion</p>
-					<p if={!spanish}>Education</p>
-				</div>
-				<div class="upper">
-					<p if={spanish}>Educacion</p>
-					<p if={!spanish}>Education</p>
-				</div>
-			</a></li>
 			<li><a href="#jobxp">
 				<div class="patch-because-reasons">
 					<p if={spanish}>Experiencia</p>
@@ -43,6 +29,20 @@
 				<div class="upper">
 					<p if={spanish}>Experiencia</p>
 					<p if={!spanish}>Experience</p>
+				</div>
+			</a></li>
+			<li><a href="#education">
+				<div class="patch-because-reasons">
+					<p if={spanish}>Educacion</p>
+					<p if={!spanish}>Education</p>
+				</div>
+				<div class="lower">
+					<p if={spanish}>Educacion</p>
+					<p if={!spanish}>Education</p>
+				</div>
+				<div class="upper">
+					<p if={spanish}>Educacion</p>
+					<p if={!spanish}>Education</p>
 				</div>
 			</a></li>
 			<li><a href="#skills">
