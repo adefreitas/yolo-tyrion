@@ -1,120 +1,7 @@
 <main>
 	<div id="language-container">
 	</div>
-	<div class="navbar">
-		<ul class="body" id="top-menu">
-			<li><a href="#intro">
-				<div class="patch-because-reasons">
-					<p if={spanish}>Inicio</p>
-					<p if={!spanish}>Home</p>
-				</div>
-				<div class="lower">
-					<p if={spanish}>Inicio</p>
-					<p if={!spanish}>Home</p>
-				</div>
-				<div class="upper">
-					<p if={spanish}>Inicio</p>
-					<p if={!spanish}>Home</p>
-				</div>
-			</a></li>
-			<li><a href="#jobxp">
-				<div class="patch-because-reasons">
-					<p if={spanish}>Experiencia</p>
-					<p if={!spanish}>Experience</p>
-				</div>
-				<div class="lower">
-					<p if={spanish}>Experiencia</p>
-					<p if={!spanish}>Experience</p>
-				</div>
-				<div class="upper">
-					<p if={spanish}>Experiencia</p>
-					<p if={!spanish}>Experience</p>
-				</div>
-			</a></li>
-			<li><a href="#education">
-				<div class="patch-because-reasons">
-					<p if={spanish}>Educacion</p>
-					<p if={!spanish}>Education</p>
-				</div>
-				<div class="lower">
-					<p if={spanish}>Educacion</p>
-					<p if={!spanish}>Education</p>
-				</div>
-				<div class="upper">
-					<p if={spanish}>Educacion</p>
-					<p if={!spanish}>Education</p>
-				</div>
-			</a></li>
-			<li><a href="#skills">
-				<div class="patch-because-reasons">
-					<p if={spanish}>Destrezas</p>
-					<p if={!spanish}>Skills</p>
-				</div>
-				<div class="lower">
-					<p if={spanish}>Destrezas</p>
-					<p if={!spanish}>Skills</p>
-				</div>
-				<div class="upper">
-					<p if={spanish}>Destrezas</p>
-					<p if={!spanish}>Skills</p>
-				</div>
-			</a></li>
-			<li><a href="#interests">
-				<div class="patch-because-reasons">
-					<p if={spanish}>Intereses</p>
-					<p if={!spanish}>Interests</p>
-				</div>
-				<div class="lower">
-					<p if={spanish}>Intereses</p>
-					<p if={!spanish}>Interests</p>
-				</div>
-				<div class="upper">
-					<p if={spanish}>Intereses</p>
-					<p if={!spanish}>Interests</p>
-				</div>
-			</a></li>
-			<li><a href="#contact">
-				<div class="patch-because-reasons">
-					<p if={spanish}>Contacto</p>
-					<p if={!spanish}>Contact</p>
-				</div>
-				<div class="lower">
-					<p if={spanish}>Contacto</p>
-					<p if={!spanish}>Contact</p>
-				</div>
-				<div class="upper">
-					<p if={spanish}>Contacto</p>
-					<p if={!spanish}>Contact</p>
-				</div>
-			</a></li>
-			<li><a href="#Acerca de">
-				<div class="patch-because-reasons">
-					<p if={spanish}>Acerca de</p>
-					<p if={!spanish}>About</p>
-				</div>
-				<div class="lower">
-					<p if={spanish}>Acerca de</p>
-					<p if={!spanish}>About</p>
-				</div>
-				<div class="upper">
-					<p if={spanish}>Acerca de</p>
-					<p if={!spanish}>About</p>
-				</div>
-			</a></li>
-			<li>
-				<a href="" onclick={changeLanguage} class="white-link">
-					<div class="patch-because-reasons">
-						<p if={spanish}> Cambiar idioma <i class="fa fa-toggle-on"></i></p>
-						<p if={!spanish}> Change language <i class="fa fa-toggle-off"></i></p>
-					</div>
-					<div class="lower">
-						<p if={spanish}> Cambiar idioma  <i class="fa fa-toggle-on"></i></p>
-						<p if={!spanish}> Change language  <i class="fa fa-toggle-off"></i></p>
-					</div>
-				</a>
-			</li>
-		</ul>
-	</div>
+	<navbar></navbar>
 	<section id="intro">
 		<div class="background">
 		</div>
@@ -303,9 +190,5 @@
 
 	<script>
 		this.spanish = true;
-		changeLanguage(){
-			this.spanish = !this.spanish;
-			console.log(this.spanish);
-		};<li><p></
 	</script>
 </main>
