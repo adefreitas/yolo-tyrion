@@ -200,7 +200,5 @@
 		];
 		this.skillsLeftSide = this.skills.splice(0, Math.ceil(this.skills.length / 2));
 		this.skillsRightSide = this.skills;
-		console.log(this.skillsRightSide);
-		console.log(this.skillsLeftSide);
 	</script>
 </main>
