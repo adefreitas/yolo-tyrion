@@ -40,7 +40,7 @@
 								<ul>
 									<li><p>Sitio Web de 4Geeks (<a href="www.4geeks.co">www.4geeks.co</a>)</p></li>
 									<li><p>Siplik (<a href="www.siplik.co">www.siplik.co</a>)</p></li>
-									<li><p>Taima</p></li>
+									<li><p>Taima (En desarrollo)</p></li>
 								</ul>
 							</div>
 						</div>
@@ -56,7 +56,7 @@
 								<ul>
 									<li><p>4Geeks Web Site (<a href="www.4geeks.co">www.4geeks.co</a>)</p></li>
 									<li><p>Siplik (<a href="www.siplik.co">www.siplik.co</a>)</p></li>
-									<li><p>Taima</p></li>
+									<li><p>Taima (Under development)</p></li>
 								</ul>
 							</div>
 						</div>
@@ -146,15 +146,17 @@
 			</div>
 		</div>
 	</section>
-	<section id="skills" class="last">
+	<section id="skills">
 		<div class="section-content">
 			<div class="wow fadeInUp">
 				<h1 class="text-center" if={spanish}>Destrezas</h1>
 				<h1 class="text-center" if={!spanish}>Skills</h1>
 				<hr>
+				<h3 class="accent-text"  if={spanish}>Destrezas</h3>
+				<h3 class="accent-text"  if={!spanish}>Skills</h3>
 				<div class="row">
 					<div class="rg-6  sm-12">
-						<ul>
+						<ul class="skill-list">
 							<li each={skillsLeftSide}>
 								<skill name={name} stars={stars}>
 								</skill>
@@ -162,13 +164,67 @@
 						</ul>
 					</div>
 					<div class="rg-6  sm-12">
-						<ul>
+						<ul class="skill-list">
 							<li each={skillsRightSide}>
 								<skill name={name} stars={stars}>
 								</skill>
 							</li>
 						</ul>
 					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<h3 class="accent-text"  if={spanish}>Idiomas</h3>
+					<h3 class="accent-text"  if={!spanish}>Languages</h3>
+					<div class="rg-6  sm-12">
+						<ul class="skill-list">
+							<li>
+								<skill name={'Español'} stars={5}>
+								</skill>
+							</li>
+						</ul>
+					</div>
+					<div class="rg-6  sm-12">
+						<ul class="skill-list">
+							<li>
+								<skill name={'Ingles'} stars={4}>
+								</skill>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="interests">
+		<div class="section-content">
+			<div class="wow fadeInUp">
+				<h1 class="text-center" if={spanish}>Intereses</h1>
+				<h1 class="text-center" if={!spanish}>Interests</h1>
+				<hr>
+				<div class="row">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="contact">
+		<div class="section-content">
+			<div class="wow fadeInUp">
+				<h1 class="text-center" if={spanish}>Contacto</h1>
+				<h1 class="text-center" if={!spanish}>Contact</h1>
+				<hr>
+				<div class="row">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="about">
+		<div class="section-content">
+			<div class="wow fadeInUp">
+				<h1 class="text-center" if={spanish}>Acerca de</h1>
+				<h1 class="text-center" if={!spanish}>About</h1>
+				<hr>
+				<div class="row">
 				</div>
 			</div>
 		</div>
@@ -185,16 +241,23 @@
 		this.spanish = true;
 		this.skills = [
 			{name: 'AngularJS', stars: 5},
+			{name: 'MySQL', stars: 5},
 			{name: 'Express.js', stars: 4},
 			{name: 'JavaScript', stars: 4},
+			{name: 'jQuery', stars: 4},
 			{name: 'HTML5', stars: 4},
 			{name: 'Bootstrap', stars: 4},
 			{name: 'CSS3', stars: 4},
 			{name: 'Sass', stars: 4},
 			{name: 'MongoDB', stars: 4},
 			{name: 'Git', stars: 4},
+			{name: 'UNIX/Linux', stars: 4},
 			{name: 'Node.js', stars: 3},
+			{name: 'PHP', stars: 3},
 			{name: 'Laravel', stars: 2},
+			{name: 'OOP', stars: 4},
+			{name: 'MVC Pattern', stars: 4},
+			{name: 'UML', stars: 4},
 			{name: 'Photoshop', stars: 4},
 			{name: 'Illustrator', stars: 4},
 		];

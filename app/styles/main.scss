@@ -158,7 +158,7 @@ a{
 section{
   position:relative;
   z-index:10;
-  min-height:100vh;
+  
   color: $section-text-color;
   background-color:darken($section-background-color, 5%);
   @include fill-parent;
@@ -183,21 +183,13 @@ section{
   &#jobxp{
     padding-top: 5vh;
   }
-  &#skills{
-    li{
-      list-style:none;
-      padding-right:12vw;
-    }
-    .star-container{
-      float:right;
-    }
-  }
   &.last{
     padding-bottom: 5vh;
   }
 }
 
 #intro{
+  min-height:100vh;
   background-color:black;
   color:white;
   @include pad(0);  
@@ -343,4 +335,34 @@ section{
   margin: 0 auto;
   width: 80px;
   display: block;
+}
+
+.skill-list{
+  .star-container{
+    float:right;
+  }
+  li{
+    list-style: none;
+    padding-right: 8vw;
+    padding-top:0px;
+    padding-bottom:0px;
+    margin-bottom:-20px;
+  }
+  skill{
+    p{
+    padding-left:5px;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:5px;
+    }
+    p, p>span>i{
+      transition: all 0.5s;
+    }
+    p:hover>span>i {
+      padding: 2px;
+    }
+    p:hover {
+      background: lighten($section-background-color, 5%);
+    }
+  }
 }

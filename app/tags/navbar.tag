@@ -23,7 +23,7 @@
 				<navbar-element content={['Acerca de', 'About']} spanish={parent.spanish}></navbar-element>
 			</a></li>
 			<li>
-				<a href="#" onclick={changeLanguage} class="white-link">
+				<a href="" onclick={changeLanguage} class="white-link">
 					<div class="patch-because-reasons">
 						<p if={parent.spanish}> Cambiar idioma <i class="fa fa-toggle-on"></i></p>
 						<p if={!parent.spanish}> Change language <i class="fa fa-toggle-off"></i></p>
