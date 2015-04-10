@@ -2,8 +2,7 @@ $(window).load(function() {
 	// Animate loader off screen
 	$(".se-pre-con").fadeOut("slow");;
 });
-rio
-t.mount('main');
+riot.mount('main');
 riot.mount('navbar');
 riot.mount('navbar-element');
 

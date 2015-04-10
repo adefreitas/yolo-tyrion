@@ -209,12 +209,6 @@ section{
     padding-right:5%;
     overflow:hidden;
   }
-  &#jobxp{
-    padding-top: 5vh;
-  }
-  &.last{
-    padding-bottom: 5vh;
-  }
 }
 
 #intro{
@@ -275,6 +269,12 @@ section{
     bottom: 0px;
     position:fixed;
 
+  }
+  a{
+    transition: all 0.5s;
+  }
+  a:hover{
+    color:white
   }
 }
 
@@ -426,5 +426,5 @@ if it's not present, don't show loader */
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background: url(images/Preloader_2.gif) center no-repeat #fff;
+  background: url(/images/preloader.gif) center no-repeat $body-background;
 }

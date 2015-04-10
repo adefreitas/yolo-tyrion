@@ -235,8 +235,11 @@
 				<hr>
 				<div class="row">
 					<div class="rg-12 sm-12">
-						<h4 class="text-center">
+						<h4 class="text-center" if={spanish}>
 						El codigo fuente esta de esta pagina esta disponible en un repositorio para ser clonado, modificado, mejorado, reutilizado o incinerado a discrecion <i class="fa fa-smile-o white"></i>
+						</h4>
+						<h4 class="text-center" if={!spanish}>
+						This page's source code is available in a repository ready to be cloned, modified, improved, recycled or incinerated at will <i class="fa fa-smile-o white"></i>
 						</h4>
 						<button class="btn btn-default btn-block center">
 							<a href="https://github.com/adefreitas/yolo-tyrion">
@@ -251,7 +254,7 @@
 	</section>
 	<section id="footer">
 		<div class="content">
-			<p class="text-center accent-text red-text">This <a href="http://neat.bourbon.io/">Neat</a>-<a href="http://bourbon.io/">Bourbon</a>-fueled <a href="">Riot.js</a> was made with some help from <a href="http://gulpjs.com/">Gulp</a> and <a href="http://sass-lang.com/">Sass</a> <i class="fa fa-heart red"></i></p>
+			<p class="text-center accent-text red-text">This <a href="http://neat.bourbon.io/">Neat</a>-<a href="http://bourbon.io/">Bourbon</a>-fueled <a href="">Riot.js</a> was started by <a href="http://yeoman.io/">Yeoman</a> with some help from <a href="http://gulpjs.com/">Gulp</a> and <a href="http://sass-lang.com/">Sass</a> <i class="fa fa-heart red"></i></p>
 			
 			<a id="license" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a>
 		</div>
