@@ -1,5 +1,10 @@
 <navbar>
-	<div class="navbar">
+	<div class="mobile-navbar">
+		<a href="" onclick={toggleNavbar}>
+			<i class="fa fa-bars"></i>
+		</a>
+	</div>
+	<div class="navbar hidden">
 		<ul class="body" id="top-menu">
 			<li><a href="#intro">
 				<navbar-element content={['Inicio', 'Home']} spanish={parent.spanish}></navbar-element>
@@ -38,7 +43,9 @@
 			this.parent.spanish = !this.parent.spanish;
 			riot.update();
 		};
-
+		toggleNavbar(){
+			$(".navbar").toggleClass('hidden');
+		}
 		//ScrollSpy
 		$(window).load(function(){
 			var lastId,

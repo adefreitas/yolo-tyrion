@@ -45,6 +45,9 @@ h1, h2, h3, h4 {
 h1 {
   margin-top: 0;
   font-size: 3.998em;
+  @include media($mobile) {
+    font-size: 3em;
+  }
 }
 
 h2 {font-size: 2.827em;}
@@ -427,4 +430,31 @@ if it's not present, don't show loader */
   height: 100%;
   z-index: 9999;
   background: url(/images/preloader.gif) center no-repeat $body-background;
+}
+
+.mobile-navbar{
+  display:none;
+  @include media($mobile) {
+      position: fixed;
+      z-index: 9998;
+      top: 0px;
+      left: 0px;
+      display: block;
+      background-color: $footer-color;
+      width: 40px;
+      height: 40px;
+      box-sizing: initial;
+      text-align: center;
+      padding-top: 10px;
+      padding-left: 5px;
+      padding-right: 6px;
+  }
+  .fa{
+    font-size:35px;
+  }
+}
+.hidden{
+  @include media($mobile) {
+    display:none;
+  }
 }

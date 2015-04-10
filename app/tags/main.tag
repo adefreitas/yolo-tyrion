@@ -1,6 +1,4 @@
 <main>
-	<div id="language-container">
-	</div>
 	<navbar></navbar>
 	<section id="intro">
 		<div class="background">
@@ -21,8 +19,12 @@
 	<section id="jobxp">
 		<div class="section-content">
 			<div class="wow fadeInUp">
-				<h1 if={spanish} class="text-center">Experiencia</h1>
-				<h1 if={!spanish} class="text-center">Experience</h1>
+				<div class="row">
+					<div class="rg-12">
+						<h1 if={spanish} class="text-center">Experiencia</h1>
+						<h1 if={!spanish} class="text-center">Experience</h1>
+					</div>
+				</div>
 				<hr>
 				<div class="row">
 					<div class="wow fadeInUp">
@@ -149,8 +151,12 @@
 	<section id="skills">
 		<div class="section-content">
 			<div class="wow fadeInUp">
-				<h1 class="text-center" if={spanish}>Destrezas</h1>
-				<h1 class="text-center" if={!spanish}>Skills</h1>
+				<div class="row">
+					<div class="rg-12">
+						<h1 class="text-center" if={spanish}>Destrezas</h1>
+						<h1 class="text-center" if={!spanish}>Skills</h1>
+					</div>
+				</div>
 				<hr>
 				<h3 class="accent-text"  if={spanish}>Destrezas</h3>
 				<h3 class="accent-text"  if={!spanish}>Skills</h3>
@@ -203,8 +209,12 @@
 	<section id="contact">
 		<div class="section-content">
 			<div class="wow fadeInUp">
-				<h1 class="text-center" if={spanish}>Contacto</h1>
-				<h1 class="text-center" if={!spanish}>Contact</h1>
+				<div class="row">
+					<div class="rg-12">
+						<h1 class="text-center" if={spanish}>Contacto</h1>
+						<h1 class="text-center" if={!spanish}>Contact</h1>
+					</div>
+				</div>
 				<hr>
 				<div class="row">
 					<div class="rg-6 sm-12">
@@ -230,8 +240,12 @@
 	<section id="about">
 		<div class="section-content">
 			<div class="wow fadeInUp">
-				<h1 class="text-center" if={spanish}>Acerca de</h1>
-				<h1 class="text-center" if={!spanish}>About</h1>
+				<div class="row">
+					<div class="rg-12">
+						<h1 class="text-center" if={spanish}>Acerca de</h1>
+						<h1 class="text-center" if={!spanish}>About</h1>
+					</div>
+				</div>
 				<hr>
 				<div class="row">
 					<div class="rg-12 sm-12">
