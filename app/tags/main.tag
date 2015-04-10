@@ -179,7 +179,9 @@
 					<div class="rg-6  sm-12">
 						<ul class="skill-list">
 							<li>
-								<skill name={'Español'} stars={5}>
+								<skill if={spanish} name={'Español'} stars={5}>
+								</skill>
+								<skill if={!spanish} name={'Spanish'} stars={5}>
 								</skill>
 							</li>
 						</ul>
@@ -187,22 +189,13 @@
 					<div class="rg-6  sm-12">
 						<ul class="skill-list">
 							<li>
-								<skill name={'Ingles'} stars={4}>
+								<skill if={spanish} name={'Ingles'} stars={4}>
+								</skill>
+								<skill if={!spanish} name={'English'} stars={4}>
 								</skill>
 							</li>
 						</ul>
 					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section id="interests">
-		<div class="section-content">
-			<div class="wow fadeInUp">
-				<h1 class="text-center" if={spanish}>Intereses</h1>
-				<h1 class="text-center" if={!spanish}>Interests</h1>
-				<hr>
-				<div class="row">
 				</div>
 			</div>
 		</div>
@@ -214,6 +207,22 @@
 				<h1 class="text-center" if={!spanish}>Contact</h1>
 				<hr>
 				<div class="row">
+					<div class="rg-6 sm-12">
+						<button class="btn btn-default btn-block center">
+							<a href="https://ve.linkedin.com/pub/andr%C3%A9s-de-freitas/18/946/182">
+								<p if={spanish}> Visitar perfil de LinkedIn </p>
+								<p if={!spanish}> Visit LinkedIn profile</p>
+    						</a>	
+						</button>
+					</div>
+					<div class="rg-6 sm-12">
+						<button class="btn btn-default btn-block center">
+							<a href="mailto:adefreitas12@gmail.com">
+								<p if={spanish}> Enviar Correo Electronico </p>
+								<p if={!spanish}> Send an email </p>
+    						</a>	
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -225,13 +234,24 @@
 				<h1 class="text-center" if={!spanish}>About</h1>
 				<hr>
 				<div class="row">
+					<div class="rg-12 sm-12">
+						<h4 class="text-center">
+						El codigo fuente esta de esta pagina esta disponible en un repositorio para ser clonado, modificado, mejorado, reutilizado o incinerado a discrecion <i class="fa fa-smile-o white"></i>
+						</h4>
+						<button class="btn btn-default btn-block center">
+							<a href="https://github.com/adefreitas/yolo-tyrion">
+								<p if={spanish}> Ir al repositorio en GitHub <i class="fa fa-github white"></i></p>
+								<p if={!spanish}> Check the repo at GitHub <i class="fa fa-github white"></i></p>
+    						</a>	
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<section id="footer">
 		<div class="content">
-			<p class="text-center accent-text">This <a href="http://neat.bourbon.io/">Neat</a>-<a href="http://bourbon.io/">Bourbon</a>-fueled <a href="">Riot.js</a> was made with some help from <a href="http://gulpjs.com/">Gulp</a> and <a href="http://sass-lang.com/">Sass</a> <i class="fa fa-heart"></i></p>
+			<p class="text-center accent-text red-text">This <a href="http://neat.bourbon.io/">Neat</a>-<a href="http://bourbon.io/">Bourbon</a>-fueled <a href="">Riot.js</a> was made with some help from <a href="http://gulpjs.com/">Gulp</a> and <a href="http://sass-lang.com/">Sass</a> <i class="fa fa-heart red"></i></p>
 			
 			<a id="license" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a>
 		</div>

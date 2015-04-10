@@ -7,7 +7,8 @@
 	</p>
 	<script>
 		this.rating = [];
-		for(var i = 0; i < 5; i++){
+		if(!!!opts.nostars){
+			for(var i = 0; i < 5; i++){
 			if(i < opts.stars){
 				this.rating.push({full: true});
 			}
@@ -15,5 +16,6 @@
 				this.rating.push({full: false});
 			}
 		};
+		}
 	</script>
 </skill>

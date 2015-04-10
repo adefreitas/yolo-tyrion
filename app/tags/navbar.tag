@@ -13,9 +13,6 @@
 			<li><a href="#skills">
 				<navbar-element content={['Destrezas', 'Skills']} spanish={parent.spanish}></navbar-element>
 			</a></li>
-			<li><a href="#interests">
-				<navbar-element content={['Intereses', 'Interests']} spanish={parent.spanish}></navbar-element>
-			</a></li>
 			<li><a href="#contact">
 				<navbar-element content={['Contacto', 'Contact']} spanish={parent.spanish}></navbar-element>
 			</a></li>

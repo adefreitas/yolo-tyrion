@@ -6,7 +6,7 @@
 
 $visual-grid: true !global;
 $accent-color: #1a80b6; //blue
-//$accent-color: #F44336; //red
+$red: #F44336; //red
 $border-radius: 2px;
 $mobile: new-breakpoint(max-width 768px);
 $section-background-color: #2d2d2d;
@@ -69,6 +69,9 @@ small, .font_small {font-size: 0.707em;}
 .rg-6{
   @include span-columns(6);
 }
+.rg-12{
+  @include fill-parent;
+}
 .sm-12 {
   @include media($mobile) {
     @include fill-parent;
@@ -107,21 +110,41 @@ small, .font_small {font-size: 0.707em;}
 
 .btn{
   padding: 5px;
-  border-radius: $border-radius;
-  padding: 5px 10px 5px 10px;
-  border: 1px solid;
-  font-weight:600;
+  padding: 10px 15px 10px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  outline: none;
+  font-weight:100;
   font-weight: regular;
+  transition: all 0.5s;
+  margin-top:10px;
+  margin-bottom:10px;
+  a{
+    text-decoration: none;
+    color:white;
+    font-weight:100;
+    transition: all 0.5s;
+    p{
+      margin:0px;
+    }
+  }
+  &.btn-block{
+    width:60%;
+    display: block;
+    @include media($mobile) {
+      width:90%;
+    }
+  }
   &.btn-default{
-    background-color:white;
-    border-color:black;
-    color: black;
+    background-color:transparent;
   }
-  &.btn-inverse{
-    background-color:black;
-    border-color:white;
-    color: white;
+  &.btn-default:hover{
+    background-color: $accent-color;
+    border-color: $accent-color;
+    a{
+      color:white;
+    }
   }
+
 }
 a{
   color:$accent-color;
@@ -145,6 +168,12 @@ a{
 .accent-text{
   color:$accent-color;
   font-weight: 400;
+}
+.red-text{
+  color:$red;
+  a{
+    color:$red;
+  }
 }
 .semi-bold{
   font-weight:600;
@@ -226,6 +255,14 @@ section{
   }
 }
 
+#about{
+  .section-content{
+    background-color: darken($accent-color,5%);
+  }
+  h4{
+    margin:2em;
+  }
+}
 
 #footer{
   min-height: 150px;
@@ -330,6 +367,12 @@ section{
 
 .fa{
   color: $accent-color;
+  &.white{
+    color:white;
+  }
+  &.red{
+    color:$red;
+  }
 }
 #license{
   margin: 0 auto;
@@ -362,7 +405,26 @@ section{
       padding: 2px;
     }
     p:hover {
-      background: lighten($section-background-color, 5%);
+      background: $accent-color;
+      .fa{
+        color: white;
+      }
     }
   }
+}
+
+
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(images/Preloader_2.gif) center no-repeat #fff;
 }
