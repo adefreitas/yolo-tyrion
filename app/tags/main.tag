@@ -155,25 +155,18 @@
 				<div class="row">
 					<div class="rg-6  sm-12">
 						<ul>
-							<li><p>AngularJS <span class="star-container"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p></li></span>
-							<li><p>Express.js<span class="star-container"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></p></li></span>
-							<li><p>JavaScript<span class="star-container"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></p></li></span>
-							<li><p>HTML5<span class="star-container"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></p></li></span>
-							<li><p>Bootstrap<span class="star-container"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></p></li></span>
-							<li><p>CSS3<span class="star-container"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></p></li></span>
-							<li><p>Sass<span class="star-container"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></p></li></span>
+							<li each={skillsLeftSide}>
+								<skill name={name} stars={stars}>
+								</skill>
+							</li>
 						</ul>
 					</div>
 					<div class="rg-6  sm-12">
 						<ul>
-							
-							<li><p>MongoDB<span class="star-container"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></p></li></span>
-							<li><p>Git<span class="star-container"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></p></li></span>
-							<li><p>Node.js<span class="star-container"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></p></li></span>
-							<li><p>Laravel<span class="star-container"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></p></li></span>
-							<li><p>Photoshop<span class="star-container"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></p></li></span>
-							<li><p>Illustrator<span class="star-container"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></p></li></span>
-
+							<li each={skillsRightSide}>
+								<skill name={name} stars={stars}>
+								</skill>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -190,5 +183,24 @@
 
 	<script>
 		this.spanish = true;
+		this.skills = [
+			{name: 'AngularJS', stars: 5},
+			{name: 'Express.js', stars: 4},
+			{name: 'JavaScript', stars: 4},
+			{name: 'HTML5', stars: 4},
+			{name: 'Bootstrap', stars: 4},
+			{name: 'CSS3', stars: 4},
+			{name: 'Sass', stars: 4},
+			{name: 'MongoDB', stars: 4},
+			{name: 'Git', stars: 4},
+			{name: 'Node.js', stars: 3},
+			{name: 'Laravel', stars: 2},
+			{name: 'Photoshop', stars: 4},
+			{name: 'Illustrator', stars: 4},
+		];
+		this.skillsLeftSide = this.skills.splice(0, Math.ceil(this.skills.length / 2));
+		this.skillsRightSide = this.skills;
+		console.log(this.skillsRightSide);
+		console.log(this.skillsLeftSide);
 	</script>
 </main>
